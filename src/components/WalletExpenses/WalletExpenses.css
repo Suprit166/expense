@@ -1,7 +1,7 @@
 .wallet-container {
   height: fit-content;
   margin: 40px;
-  padding: 20px; /* Adjust as needed */
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,22 +9,22 @@
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for opacity */
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  backdrop-filter: blur(10px); /* Blur the background behind the element */
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); 
 }
 
 .glassmorphismButton,
 input,
 select,
 select > option {
-  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for opacity */
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  backdrop-filter: blur(10px); /* Blur the background behind the element */
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   margin: 10px;
   padding: 15px;
   font-weight: bold;

@@ -114,22 +114,22 @@ const ExpensesTable = ({
   const editExpense = (e) => {
     e.preventDefault();
 
-    // Find the index of the expense you're updating
+   
     const expenseIndex = data.findIndex(
       (expense) => expense.id === currExpense.id
     );
 
-    // Make a copy of the current expenses array
+    
     const updatedExpenses = [...data];
 
-    // Update the expense at the found index with the new details
+   
     if (expenseIndex !== -1) {
       updatedExpenses[expenseIndex] = {
         ...updatedExpenses[expenseIndex],
         ...currExpense,
       };
 
-      // Update the expenses list with the edited expense
+     
       handleExpenseListUpdate(updatedExpenses);
       setIsModalOpen(false);
     } else {
@@ -226,7 +226,7 @@ const ExpensesTable = ({
             required
           >
             <option value="">Select Category</option>{" "}
-            {/* Default empty option */}
+           
             {categories.map((category, index) => (
               <option key={index} value={category}>
                 {category}

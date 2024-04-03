@@ -10,7 +10,7 @@ import {
 import "./LineBarChart.css";
 
 const processData = (data) => {
-  // Sum expenses by category
+  
   const categoryTotals = data.reduce((acc, item) => {
     const amount = Number(item.price) || 0;
     acc[item.category] = acc[item.category] || {
@@ -21,7 +21,7 @@ const processData = (data) => {
     return acc;
   }, {});
 
-  // Sort categories by total expense and convert to array for the chart
+  
   return Object.values(categoryTotals)
     .sort((a, b) => b.total - a.total)
     .map((cat) => ({ name: cat.category, value: cat.total }));

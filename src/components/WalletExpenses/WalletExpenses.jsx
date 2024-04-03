@@ -4,7 +4,7 @@ import "./WalletExpenses.css";
 import RoundChart from "../RoundChart/RoundChart";
 import { v4 as uuidv4 } from "uuid";
 
-// Ensure the modal is bound to your appElement for accessibility reasons
+
 Modal.setAppElement("#root");
 
 const WalletExpensesComponent = ({
@@ -56,7 +56,7 @@ const WalletExpensesComponent = ({
       price: "",
       category: "",
       date: "",
-    }); // Reset form
+    }); 
   };
 
   const addIncome = (e) => {
@@ -68,7 +68,7 @@ const WalletExpensesComponent = ({
         JSON.stringify(walletBalance + parseInt(newIncome, 10))
       );
       setIsIncomeModalOpen(false);
-      setNewIncome(""); // Reset form
+      setNewIncome(""); 
     }
   };
 
@@ -76,7 +76,7 @@ const WalletExpensesComponent = ({
     handleExpenseListUpdate(expenses);
   }, [expenses]);
 
-  //By default add totalBalance as 5000
+  
   useEffect(() => {
     if (!localStorage.getItem("totalBalance"))
       localStorage.setItem("totalBalance", JSON.stringify(5000));
@@ -130,7 +130,7 @@ const WalletExpensesComponent = ({
       </div>
       <RoundChart data={expenses} />
 
-      {/* Modal for adding income */}
+      
       <Modal
         isOpen={isIncomeModalOpen}
         onRequestClose={() => setIsIncomeModalOpen(false)}
@@ -163,7 +163,7 @@ const WalletExpensesComponent = ({
         </form>
       </Modal>
 
-      {/* Modal for adding expenses */}
+     
       <Modal
         isOpen={isExpenseModalOpen}
         onRequestClose={() => setIsExpenseModalOpen(false)}
@@ -196,7 +196,7 @@ const WalletExpensesComponent = ({
             required
           >
             <option value="">Select Category</option>{" "}
-            {/* Default empty option */}
+            
             {categories.map((category, index) => (
               <option key={index} value={category}>
                 {category}
